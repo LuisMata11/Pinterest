@@ -30,7 +30,15 @@
     <%= form.text_area :description, id: :pin_description, :class => 'form-control',:placeholder => " Descripción del Pin", :rows=> "10", :cols => "30" %>
   </div>
 </div>
+<div class="form-group">
+  <div class="field">
+    <% @pins.each do |pin| %>
+    <%= hidden_field_tag :user_id, pin.user.id %>
+        <%= form.hidden_fiel :user_id, value: pin.user.id %>
+    <% end %>
+  </div>
 
+</div>
 
 
   <div class="actions">
