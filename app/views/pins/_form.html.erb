@@ -34,7 +34,7 @@
   <div class="field">
     <% @pins.each do |pin| %>
     <%= hidden_field_tag :user_id, pin.user.id %>
-        <%= form.hidden_fiel :user_id, value: pin.user.id %>
+        <%= form.hidden_field :user_id, value: pin.user.id %>
     <% end %>
   </div>
 
