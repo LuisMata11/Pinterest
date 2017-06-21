@@ -30,6 +30,7 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
+    @pins=current_user.pins
   end
 
   # POST /pins
